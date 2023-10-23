@@ -1,5 +1,9 @@
 :set number
-:set relativenumber
+:syn on
+:set expandtab
+:set ic
+:set hls is
+:set nocp           
 :set autoindent
 :set tabstop=4
 :set shiftwidth=4
