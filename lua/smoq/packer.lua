@@ -13,13 +13,12 @@ return require('packer').startup(function(use)
         requires = { {'nvim-lua/plenary.nvim'} }
     }
 
-    use ({
-        "bluz71/vim-nightfly-colors",
-        as = 'nightfly',
-
-        vim.cmd('colorscheme nightfly')       
-
-    })
+    use {
+    'bluz71/vim-nightfly-guicolors',
+    config = function()
+        vim.cmd('colorscheme nightfly')
+    end,
+    }
     use({ 
         'nvim-treesitter/nvim-treesitter', 
         {run = ':TSUpdate'}
