@@ -27,9 +27,9 @@ fi
 
 # Pull a Git repository (replace with your Git repository URL)
 # For example, pulling a configuration from a GitHub repository:
-git remote add origin https://github.com/SmoQx/vim_cfg.git 
-git fetch origin
-git checkout -b master --track origin/master
+git remote add origin https://github.com/SmoQx/vim_cfg.git || exit
+git fetch origin || exit
+git checkout -b master --track origin/master || exit
 
 # Check if Neovim is installed
 if ! command_exists nvim; then
@@ -37,7 +37,7 @@ if ! command_exists nvim; then
   # Install Neovim using your system's package manager, e.g., for Debian/Ubuntu:
   sudo apt-get update
   echo "Extracting nvim"
-  tar -xzvf nvim-linux64.tar.gz -C ~/vim-extract
+  tar -xzvf nvim-linux64.tar.gz -C ~/vim-extract || exit
   sudo mv ~/vim-extract/nvim-linux64 /opt
   sudo ln -s /opt/nvim-linux64/bin/nvim /usr/local/bin/nvim
   echo "Mounted nvim"
