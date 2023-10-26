@@ -9,12 +9,14 @@ command_exists() {
 if ! command_exists git; then
   echo "Git is not installed. Installing..."
   # Install Git using your system's package manager, e.g., for Debian/Ubuntu:
+  sudo apt-get update
   sudo apt-get install git
 fi
 
 if ! command_exists python3; then
-  echo "pyhon3 is not installed. Installing..."
-  # Install Git using your system's package manager, e.g., for Debian/Ubuntu:
+  echo "Python 3 is not installed. Installing..."
+  # Install Python 3 using your system's package manager, e.g., for Debian/Ubuntu:
+  sudo apt-get update
   sudo apt-get install python3
 fi
 
