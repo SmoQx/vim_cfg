@@ -8,10 +8,19 @@ return require('packer').startup(function(use)
     use 'wbthomason/packer.nvim'
 
     use {
+        "akinsho/toggleterm.nvim", tag = '*', config = function()
+        require("toggleterm").setup({
+            start_in_insert = true,
+            insert_mappings = true,
+            terminal_mappings = true,
+        })
+    end}
+
+    use({
         'nvim-telescope/telescope.nvim', tag = '0.1.4',
         -- or                            , branch = '0.1.x',
         requires = { {'nvim-lua/plenary.nvim'} }
-    }
+    })
 
     use ({
         "bluz71/vim-nightfly-colors",
@@ -20,13 +29,13 @@ return require('packer').startup(function(use)
         vim.cmd('colorscheme nightfly')       
 
     })
-    use({ 
+    use { 
         'nvim-treesitter/nvim-treesitter', 
         {run = ':TSUpdate'}
-    })
+    }
     use('ThePrimeagen/harpoon')
 
-    use {
+    use{
         'VonHeikemen/lsp-zero.nvim',
         branch = 'v3.x',
         requires = {
@@ -41,5 +50,6 @@ return require('packer').startup(function(use)
             {'hrsh7th/cmp-nvim-lsp'},
             {'L3MON4D3/LuaSnip'},
         }
+
     }
 end)

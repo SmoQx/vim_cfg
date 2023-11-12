@@ -12,4 +12,5 @@ vim.keymap.set('x', '<C-K>', ":m '<-2<CR>gv")
 vim.keymap.set('x', '<C-S-UP>', ":m '<-2<CR>gv")
 vim.keymap.set('x', '<C-J>', ":m '>+1<CR>gv")
 vim.keymap.set('x', '<C-S-DOWN>', ":m '>+1<CR>gv")
+vim.keymap.set({'n', 'x'}, '<Del>', '"_d')
 
