@@ -26,13 +26,14 @@ return require('packer').startup(function(use)
         "bluz71/vim-nightfly-colors",
         as = 'nightfly',
 
-        vim.cmd('colorscheme nightfly')       
-
+        vim.cmd('colorscheme nightfly')
     })
+    
     use { 
         'nvim-treesitter/nvim-treesitter', 
         {run = ':TSUpdate'}
     }
+    
     use('ThePrimeagen/harpoon')
 
     use{

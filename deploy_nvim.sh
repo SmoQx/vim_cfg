@@ -9,7 +9,16 @@ command_exists() {
 if ! command_exists git; then
   echo "Git is not installed. Installing..."
   # Install Git using your system's package manager, e.g., for Debian/Ubuntu:
+  sudo apt-get update
   sudo apt-get install git
+fi
+
+if ! command_exists python3; then
+  echo "Python 3 is not installed. Installing..."
+  # Install Python 3 using your system's package manager, e.g., for Debian/Ubuntu:
+  sudo apt-get update
+  sudo apt-get install python3
+  sudo apt-get isntall python3-pip
 fi
 
 # Create the ~/.config/nvim directory if it doesn't exist
@@ -27,22 +36,22 @@ fi
 
 # Pull a Git repository (replace with your Git repository URL)
 # For example, pulling a configuration from a GitHub repository:
-git remote add origin https://github.com/SmoQx/vim_cfg.git 
-git fetch origin
-git checkout -b master --track origin/master
+git remote add origin https://github.com/SmoQx/vim_cfg.git || exit
+git fetch origin 
+git checkout -b master --track origin/master 
 
 # Check if Neovim is installed
 if ! command_exists nvim; then
   echo "Neovim is not installed. Installing..."
-  # Install Neovim using your system's package manager, e.g., for Debian/Ubuntu:
+  # Install Neovim by extracting it and moving it to/opt and add it to path
   sudo apt-get update
   echo "Extracting nvim"
-  tar -xzvf nvim-linux64.tar.gz -C ~/vim-extract
+  tar -xzvf nvim-linux64.tar.gz -C ~/vim-extract || exit
   sudo mv ~/vim-extract/nvim-linux64 /opt
   sudo ln -s /opt/nvim-linux64/bin/nvim /usr/local/bin/nvim
   echo "Mounted nvim"
 fi
-
+# clone a git repository for packer
 git clone --depth 1 https://github.com/wbthomason/packer.nvim\
  ~/.local/share/nvim/site/pack/packer/start/packer.nvim
 
