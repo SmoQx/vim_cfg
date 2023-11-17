@@ -14,3 +14,4 @@ vim.keymap.set('x', '<C-J>', ":m '>+1<CR>gv")
 vim.keymap.set('x', '<C-S-DOWN>', ":m '>+1<CR>gv")
 vim.keymap.set({'n', 'x'}, '<Del>', '"_d')
 vim.keymap.set('n', '<leader><C-t>', ':ToggleTerm<CR>a')
+-- Rest of the remaps are in plugin config files in ~/.config/nvim/after/plugin/
