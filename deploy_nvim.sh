@@ -11,7 +11,7 @@ log_error() {
 }
 
 # Redirect stdout and stderr to a log file
-exec &> "$LOG_FILE"
+# exec &> "$LOG_FILE"
 
 # Check for /etc/os-release
 if [ -f "/etc/os-release" ]; then
@@ -22,7 +22,7 @@ if [ -f "/etc/os-release" ]; then
         distribution=$(echo "$distribution_line" | cut -d= -f2 | tr -d '"')
 
         case "$distribution" in
-            debian|ubuntu)
+            debian|ubuntu|kali)
                 echo "Debian-based distribution"
                 package_manager="apt"
                 # Add Debian-specific commands here
