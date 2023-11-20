@@ -81,9 +81,6 @@ if ! command_exists python3; then
     sudo $package_manager install python3-pip || log_error "Failed to install Python 3 pip."
 fi
 
-sudo $package_manager install npm || log_error "Failed to install npm."
-sudo $package_manager install xclip || log_error "Failed to install xclip."
-
 # Create the ~/.config/nvim directory if it doesn't exist
 if [ ! -d "$HOME/.config/nvim" ]; then
     mkdir -p "$HOME/.config/nvim"
@@ -96,6 +93,9 @@ cd "$HOME/.config/nvim" || log_error "Failed to navigate to Neovim config direct
 if [ ! -d ".git" ]; then
     git init || log_error "Failed to initialize Git repository."
 fi
+
+sudo $package_manager install npm || log_error "Failed to install npm."
+sudo $package_manager install xclip || log_error "Failed to install xclip."
 
 # Pull a Git repository (replace with your Git repository URL)
 # For example, pulling a configuration from a GitHub repository:
@@ -122,8 +122,8 @@ git clone --depth 1 https://github.com/wbthomason/packer.nvim\
  ~/.local/share/nvim/site/pack/packer/start/packer.nvim || log_error "Failed to clone Packer repository."
 
 echo "Setup complete."
-cd ~/.config/nvim/plugin
-nvim packer_compiled.lua
+cd ~/.config/nvim/lua/smoq
+nvim packer.lua
 
 # Display log file path
 echo "Log file: $LOG_FILE"
