@@ -1,9 +1,6 @@
 To deploy Neovim config:
 -Run the deploy_nvim.sh script.  
--Open nvim.  
--use :Ex command  
--use :so command in init.lua  
--use :so command in /plugin/packer_compliled.lua  
+after unpacking and installing dependencys it will open the script below  
 -use :so command in /lua/smoq/packer.lua  
 -use :PackerSync in /lua/smoq/packer.lua  
 if plugins are installed then check :Mason if lsp's are installed  
