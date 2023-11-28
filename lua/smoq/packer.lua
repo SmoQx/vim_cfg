@@ -42,6 +42,7 @@ return require('packer').startup(function(use)
         branch = 'v3.x',
         requires = {
             --- Uncomment these if you want to manage LSP servers from neovim
+            { 'neovim/nvim-lspconfig' },
             {'williamboman/mason.nvim'},
             {'williamboman/mason-lspconfig.nvim'},
 
@@ -51,6 +52,13 @@ return require('packer').startup(function(use)
             {'hrsh7th/nvim-cmp'},
             {'hrsh7th/cmp-nvim-lsp'},
             {'L3MON4D3/LuaSnip'},
+            { 'hrsh7th/cmp-nvim-lua' },
+            { 'hrsh7th/cmp-nvim-lsp-signature-help' },
+            -- Snippets
+            { 'L3MON4D3/LuaSnip' },
+            { 'rafamadriz/friendly-snippets' },
+            --Debugging
+            { 'simrat39/rust-tools.nvim' },
         }
 
     }

@@ -8,7 +8,9 @@ end)
 require('mason').setup({})
 require('mason-lspconfig').setup({
   ensure_installed = {
-    'pyright'
+    'pyright',
+    'rust_analyzer',
+    'clangd',
   },
   handlers = {
     lsp_zero.default_setup,
