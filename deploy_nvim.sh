@@ -64,7 +64,7 @@ fi
 command_exists() {
     command -v "$1" >/dev/null 2>&1
 }
-
+sudo $package_manager update || log_error "Failed to update package manager."
 # Check if Git is installed
 if ! command_exists git; then
     log_error "Git is not installed. Installing..."
