@@ -64,7 +64,10 @@ fi
 command_exists() {
     command -v "$1" >/dev/null 2>&1
 }
+# Update packages
 sudo $package_manager update || log_error "Failed to update package manager."
+# Install curl or wget for mason 
+sudo $package_manager curl || log_error "Failed to install / update curl."
 # Check if Git is installed
 if ! command_exists git; then
     log_error "Git is not installed. Installing..."
