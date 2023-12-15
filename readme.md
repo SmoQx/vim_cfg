@@ -27,11 +27,12 @@ plugin/ contains:
 -packer_compiled.lua - Automatically generated packer.nvim plugin loader code
   
 init.lua contains Neovim configuration.
-sudo mv /var/lib/dpkg/info /var/lib/dpkg/info_old
-sudo mkdir /var/lib/dpkg/info
-sudo apt-get update && sudo apt-get -f install
-sudo mv /var/lib/dpkg/info/* /var/lib/dpkg/info_old
-sudo rm -rf /var/lib/dpkg/info　
-sudo mv /var/lib/dpkg/info_old /var/lib/dpkg/info
-if the is a problem with libc6:amd64 try:
+  
+if the is a problem with libc6:amd64 try:  
 
+sudo mv /var/lib/dpkg/info /var/lib/dpkg/info_old  
+sudo mkdir /var/lib/dpkg/info  
+sudo apt-get update && sudo apt-get -f install  
+sudo mv /var/lib/dpkg/info/* /var/lib/dpkg/info_old  
+sudo rm -rf /var/lib/dpkg/info  
+sudo mv /var/lib/dpkg/info_old /var/lib/dpkg/info  
