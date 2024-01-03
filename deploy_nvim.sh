@@ -67,6 +67,7 @@ command_exists() {
 # Update packages
 sudo $package_manager update || log_error "Failed to update package manager."
 sudo $package_manager upgrade || log_error "Failed to upgrade packages."
+# Install ripgrep
 sudo $package_manager ripgrep || log_error "Failed to install ripgrep"
 # Install curl or wget for mason 
 sudo $package_manager curl || log_error "Failed to install / update curl."
