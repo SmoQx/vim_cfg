@@ -21,12 +21,11 @@ return require('packer').startup(function(use)
         -- or                            , branch = '0.1.x',
         requires = { {'nvim-lua/plenary.nvim'} }
     })
-    
+
     use {
         'BurntSushi/ripgrep'
     }
 
-         
     use {
         'BurntSushi/ripgrep'
     }
@@ -35,18 +34,23 @@ return require('packer').startup(function(use)
         "bluz71/vim-nightfly-colors",
         as = 'nightfly',
     }
-    
+
     use {
-        'Mofiqul/dracula.nvim' 
+        'Mofiqul/dracula.nvim'
     }
 
-    use { 
-        'nvim-treesitter/nvim-treesitter', 
+    use {
+        "mg979/vim-visual-multi",
+         branch = "master",
+    }
+
+    use {
+        'nvim-treesitter/nvim-treesitter',
         {run = ':TSUpdate'}
     }
-        
+
     use "nvim-lua/plenary.nvim" -- don't forget to add this one if you don't have it yet!
-        
+
     use {
         "ThePrimeagen/harpoon",
         branch = "harpoon2",
