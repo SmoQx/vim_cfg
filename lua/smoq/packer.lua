@@ -27,10 +27,6 @@ return require('packer').startup(function(use)
     }
 
     use {
-        'BurntSushi/ripgrep'
-    }
-
-    use {
         "bluz71/vim-nightfly-colors",
         as = 'nightfly',
     }
