@@ -27,7 +27,7 @@ return require('packer').startup(function(use)
     }
 
     use {
-        "bluz71/vim-nightfly-colors",
+        'bluz71/vim-nightfly-colors',
         as = 'nightfly',
     }
 
@@ -36,7 +36,7 @@ return require('packer').startup(function(use)
     }
 
     use {
-        "mg979/vim-visual-multi",
+        'mg979/vim-visual-multi',
          branch = "master",
     }
 
