@@ -2,7 +2,7 @@
 local function setupNeovimForFileType()
     local filetype = vim.fn.expand('%:e') -- Get file extension
 
-    if filetype == "python" then
+    if filetype == ".py" then
         print(filetype)
     end
 end
