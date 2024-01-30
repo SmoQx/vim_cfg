@@ -17,6 +17,7 @@ Currently installed plugins and their configuration:
 -[color](https://github.com/bluz71/vim-nightfly-colors) - nightfly is a dark midnight theme for modern Neovim  
 -[ripgrep](https://github.com/BurntSushi/ripgrep) - ripgrep is used for quicker search withing working file tree  
 -[vim-visual-multi](https://github.com/mg979/vim-visual-multi) - vim-visual-multi is used for multiline coursor
+-[recognize] - it's a script written to change remap for commenting selected text and remap for formatters  
 
    
 lua/smoq contains:
