@@ -1,3 +1,8 @@
+require("toggleterm").setup{
+    start_in_insert = false,
+    persist_mode = true,
+    direction = 'float'
+}
 vim.keymap.set('t', '<esc>', [[<C-\><C-n>]], opts)
 vim.keymap.set('t', 'jk', [[<C-\><C-n>]], opts)
 --vim.keymap.set('t', '<C-h>', [[<Cmd>wincmd h<CR>]], opts)
