@@ -16,6 +16,10 @@ return require('packer').startup(function(use)
         })
     end}
 
+    use {
+        'SmoQx/comment_and_format'
+    }
+
     use({
         'nvim-telescope/telescope.nvim', tag = '0.1.4',
         -- or                            , branch = '0.1.x',
