@@ -61,7 +61,7 @@ return require('packer').startup(function(use)
             { 'neovim/nvim-lspconfig' },
             {'williamboman/mason.nvim'},
             {'williamboman/mason-lspconfig.nvim'},
-
+            { 'folke/neodev.nvim' },
             -- LSP Support
             {'neovim/nvim-lspconfig'},
             -- Autocompletion
@@ -71,8 +71,11 @@ return require('packer').startup(function(use)
             { 'hrsh7th/cmp-nvim-lua' },
             { 'hrsh7th/cmp-nvim-lsp-signature-help' },
             -- Snippets
-            { 'L3MON4D3/LuaSnip' },
+            { 'L3MON4D3/LuaSnip',
+              dependencies = { 'rafamadriz/friendly-snippets' }},
             { 'rafamadriz/friendly-snippets' },
+            { 'molleweide/LuaSnip-snippets.nvim' },
+            { 'saadparwaiz1/cmp_luasnip' },
             --Debugging
             { 'simrat39/rust-tools.nvim' },
         }
