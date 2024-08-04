@@ -1,11 +1,11 @@
 return {
     "nvim-treesitter/nvim-treesitter",
     build = ":TSUpdate",
-    cmd = { "TSUpdateSync", "TSUpdate", "TSInstall" },
+--    cmd = { "TSUpdateSync", "TSUpdate", "TSInstall" },
     opts_extend = { "ensure_installed" },
     opts = {
       -- A list of parser names, or "all" (the five listed parsers should always be installed)
-      ensure_installed = { "c", "python", "lua", "vim", "vimdoc", "query", "SQL",},
+      ensure_installed = { "c", "python", "lua", "vim", "vimdoc", "query",},
 
       -- Install parsers synchronously (only applied to `ensure_installed`)
       sync_install = true,
@@ -23,10 +23,9 @@ return {
         additional_vim_regex_highlighting = false,
       },
     },
-    config = function(_, opts)
-        if type(opts.ensure_installed) == "table" then
-          opts.ensure_installed = LazyVim.dedup(opts.ensure_installed)
-        end
-        require("nvim-treesitter.configs").setup(opts)
-      end,
+--    config = function(_, opts)
+--        if type(opts.ensure_installed) == "table" then
+--            require("nvim-treesitter.configs").setup(opts)
+--        end
+--      end,
 }
