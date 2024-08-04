@@ -12,4 +12,6 @@ vim.opt.showmode = false
 vim.opt.wrap = false
 vim.opt.ignorecase = true
 vim.opt.smartcase = true
-require("smoq")
+
+require("config.remap")
+require("config.lazy")
