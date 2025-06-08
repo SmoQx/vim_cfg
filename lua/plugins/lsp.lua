@@ -82,6 +82,9 @@ return{
         lsp_zero.default_keymaps({buffer = bufnr})
       end)
 
+      vim.diagnostic.config({virtual_text = true,})
+
+
       require('mason-lspconfig').setup({
         ensure_installed = {},
         handlers = {
